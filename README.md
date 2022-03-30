@@ -25,7 +25,6 @@ composer require tuandm/laravue-core
 php artisan laravue:setup
 ```
 This command will do these steps:
-- Setup JWT secret and API endpoint
 - Publish Laravue vendor packages/assets
 - Install NPM dependencies
 - Create .babelc file (if it doesn't exist)
@@ -37,10 +36,6 @@ This command will do these steps:
 It's recommended to use [laravue:setup command](#setup-laravue). If you want to manually install, you can do following setps:
 
 ##### .env file
-Generate JWT secret for authentication
-```
-php artisan jwt:secret
-```
 Add these two lines to `.env` file
 ```
   BASE_API=/api
@@ -86,11 +81,11 @@ Open `config/auth.php` and modify as below
         'guard' => 'api',
     ],
     ...
-    # Use JWT driver for api guard
+    # Use Passport driver for api guard
     'guards' => [
     ....
     'api' => [
-        'driver' => 'jwt',
+        'driver' => 'passport',
     ....
     
     # Use Laravue User model to authenticate

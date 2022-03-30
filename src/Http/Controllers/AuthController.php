@@ -9,7 +9,7 @@
 namespace Tuandm\Laravue\Http\Controllers;
 
 use Tuandm\Laravue\JsonResponse;
-use Tuandm\Laravue\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;

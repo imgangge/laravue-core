@@ -1,7 +1,7 @@
 <?php
 namespace Tuandm\Laravue\Database\Seeds;
 
-use Tuandm\Laravue\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 

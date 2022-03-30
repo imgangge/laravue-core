@@ -40,11 +40,6 @@ class SetupCommand extends Command
      */
     public function handle()
     {
-        // Call jwt:secret command
-        $this->info('>>> Running: php artisan jwt:secret');
-        sleep(1);
-        $this->call('jwt:secret');
-
         if (file_exists($path = $this->envPath()) === false) {
             $this->comment('Seems your .env does not exist, please setup.');
             return;
@@ -64,7 +59,6 @@ class SetupCommand extends Command
         $this->setupPackages();
         $this->setupDependencies();
         $this->call('laravue:webpack');
-        $this->comment('Done! Please setup config/auth.php to use JWT for API guard!');
     }
 
     /**
@@ -125,7 +119,7 @@ class SetupCommand extends Command
     "@babel/plugin-transform-runtime",
     "babel-plugin-transform-vue-jsx"
   ]
-}            
+}
 JSON;
 
             file_put_contents($babelrcPath, $content, FILE_APPEND);

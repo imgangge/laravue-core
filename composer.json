@@ -6,7 +6,7 @@
         "php": "^8.0",
         "laravel/framework": "^9.0",
         "laravel/passport": "^10.3",
-        "laravel/socialite": "6.x-dev"
+        "laravel/socialite": "^5.5"
     },
     "autoload": {
         "psr-4": {
